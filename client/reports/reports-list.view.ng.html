@@ -1,0 +1,49 @@
+<div class="reports-list container">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <i class="fa fa-tasks"></i> {{ "REPORTS"  | capitalize }}
+                <a class="btn btn-xs btn-success yo-right" ng-click="addReport()"><i class="fa fa-plus-circle"></i> {{ "ADD_REPORT"  | capitalize }}</a>
+            </h3>
+        </div>
+        <div class="panel-body" ng-if="reports">
+            <div class="row yo-mb5" ng-repeat="report in reports">
+                <div class="col-sm-12">
+                    <i ng-class="report.chiuso == true ? 'fa fa-check-circle yo-true' : 'fa fa-close yo-false'"></i>
+                    <a ui-sref="reports.detail({ reportId: report._id })">{{ report.name }}-{{ report._id }}</a>
+                    <button class="btn btn-sm btn-danger yo-right" ng-click="remove(report._id)"><i class="fa fa-trash"></i> {{ "BUTTON_REMOVE"  | capitalize }}</button>
+                </div>
+            </div>
+            <div>------------------------------</div>
+            <!--<div class="row yo-mb5">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<i ng-class="reports[0].chiuso == true ? 'fa fa-check-circle yo-true' : 'fa fa-close yo-false'"></i>-->
+                    <!--<a ui-sref="reports.detail({ reportId: reports[0]._id })">{{ reports[0].name }}</a>-->
+                    <!--<button class="btn btn-sm btn-danger yo-right" ng-click="remove(reports[0]._id)"><i class="fa fa-trash"></i> {{ "BUTTON_REMOVE"  | capitalize }}</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row yo-mb5">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<i ng-class="reports[1].chiuso == true ? 'fa fa-check-circle yo-true' : 'fa fa-close yo-false'"></i>-->
+                    <!--<a ui-sref="reports.detail({ reportId: reports[1]._id })">{{ reports[1].name }}</a>-->
+                    <!--<button class="btn btn-sm btn-danger yo-right" ng-click="remove(reports[1]._id)"><i class="fa fa-trash"></i> {{ "BUTTON_REMOVE"  | capitalize }}</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row yo-mb5">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<i ng-class="reports[2].chiuso == true ? 'fa fa-check-circle yo-true' : 'fa fa-close yo-false'"></i>-->
+                    <!--<a ui-sref="reports.detail({ reportId: reports[2]._id })">{{ reports[2].name }}</a>-->
+                    <!--<button class="btn btn-sm btn-danger yo-right" ng-click="remove(reports[2]._id)"><i class="fa fa-trash"></i> {{ "BUTTON_REMOVE"  | capitalize }}</button>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="row yo-mb5">-->
+                <!--<div class="col-sm-12">-->
+                    <!--<i ng-class="reports[3].chiuso == true ? 'fa fa-check-circle yo-true' : 'fa fa-close yo-false'"></i>-->
+                    <!--<a ui-sref="reports.detail({ reportId: reports[3]._id })">{{ reports[3].name }}</a>-->
+                    <!--<button class="btn btn-sm btn-danger yo-right" ng-click="remove(reports[3]._id)"><i class="fa fa-trash"></i> {{ "BUTTON_REMOVE"  | capitalize }}</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <p>{{ "TOTAL_NUMBER_OF_REPORTS"  | capitalize }}: {{reports.length}}</p>
+</div>

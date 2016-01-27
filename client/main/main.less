@@ -1,0 +1,95 @@
+@gray-base:              #000;
+@gray-darker:            lighten(@gray-base, 13.5%); // #222
+@gray-dark:              lighten(@gray-base, 20%);   // #333
+@gray:                   lighten(@gray-base, 33.5%); // #555
+@gray-light:             lighten(@gray-base, 46.7%); // #777
+@gray-lighter:           lighten(@gray-base, 93.5%); // #eee
+
+@brand-primary:         darken(#428bca, 6.5%); // #337ab7
+@brand-success:         #5cb85c;
+@brand-info:            #5bc0de;
+@brand-warning:         #f0ad4e;
+@brand-danger:          #d9534f;
+
+.pagination {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+        padding: 0.5rem;
+        margin: 0.5rem;
+    }
+}
+.yo-link{
+    cursor: pointer;
+}
+.yo-right{
+    float: right;
+}
+.yo-mb5{
+    margin-bottom: 5px;
+}
+.yo-mb10{
+    margin-bottom: 10px;
+}
+.yo-mb20{
+    margin-bottom: 20px;
+}
+.yo-mb30{
+    margin-bottom: 30px;
+}
+.yo-mb40{
+    margin-bottom: 40px;
+}
+.yo-mt5{
+    margin-top: 5px;
+}
+.yo-mt10{
+    margin-top: 10px;
+}
+.yo-mt20{
+    margin-top: 20px;
+}
+.yo-mt30{
+    margin-top: 30px;
+}
+.yo-mt40{
+    margin-top: 40px;
+}
+
+.yo-primary {
+    color: @brand-primary; //#337ab7;
+}
+
+.yo-primary-bg {
+    background-color: @brand-primary; //#337ab7;
+    color: #fff;
+}
+
+.yo-false{
+    color: @brand-danger;
+}
+
+.yo-true{
+    color: @brand-success;
+}
+
+.yo-center{
+    text-align: center;
+}
+
+.yo-bold{
+    font-weight: bold;
+}
+
+
+
+.yo-table-weekend {
+    background-color: lighten(@gray-base, 90%);
+}
+
+.yo-table-festivity {
+    background-color: lighten(@gray-base, 80%);
+}
