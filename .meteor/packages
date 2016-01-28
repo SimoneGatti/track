@@ -26,7 +26,7 @@ jeeeyul:moment-with-langs
 angularui:angular-google-maps
 email
 dotansimha:accounts-ui-angular
-angular
+angular@1.3.5
 planettraining:angular-translate
 vishalm:angular-toastr
 barbatus:angular-wizard

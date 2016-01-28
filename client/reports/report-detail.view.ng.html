@@ -11,7 +11,11 @@
                     <div ng-include="'client/components/common-page/report-table.view.ng.html'"></div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a class="btn" ng-class="report.chiuso ? 'btn-success' : 'btn-primary'" ng-click="chiudi()">{{ (report.chiuso ? "OPEN" : "CLOSE") | capitalize }}</a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

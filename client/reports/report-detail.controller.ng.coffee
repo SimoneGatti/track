@@ -13,3 +13,5 @@ angular.module 'trackerApp'
 
   $scope.isNumber = angular.isNumber
 
+  $scope.chiudi = () ->
+    Meteor.call('reports.toggleChiuso', $scope.report._id, !$scope.report.chiuso)

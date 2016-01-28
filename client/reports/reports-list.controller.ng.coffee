@@ -2,13 +2,13 @@
 
 angular.module 'trackerApp'
 .controller 'ReportsListCtrl', ($scope, $meteor) ->#, toastr, dialogs) ->
-  $scope.subscribe('myReports', () -> console.log 'myReports')
-  $scope.subscribe('festivities', () -> console.log 'festivities')
+  $scope.subscribe('myReports')
+  $scope.subscribe('festivities')
 
   $scope.helpers({
     reports: () ->
         ret = Reports.find({'user._id': Meteor.userId()})
-        ret.forEach((d,i,c) -> console.log 'ret>'+i+'>'+d.name)
+#        ret.forEach((d,i,c) -> console.log 'ret>'+i+'>'+d.name)
         ret
   })
     

@@ -1,0 +1,34 @@
+<div class="reports-list container">
+    <div class="row yo-mb20">
+        <div class="col-sm-8 col-sm-offset-3 col-xs-12">
+            <pre>res: {{res}}</pre>
+            <pre>res2: {{res2}}</pre>
+            <pre>getReactively('res'): {{ getReactively('res') }}</pre>
+            <pre>getReactively('res2'){{ getReactively('res2') }}</pre>
+            <pre>usersClosed: {{usersClosed}}</pre>
+            <pre>usersClosed2: {{usersClosed2}}</pre>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <a class="btn" ng-click="prova()">PROVA</a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                <div class="panel panel-default" ng-repeat="usr in allUsers | groupBy: '_id' | orderBy: 'profile.name' track by $index">
+                    <div class="panel-heading" role="tab" id="heading{{$index}}">
+                        <div class="panel-title">
+                            <a class="collapsed"
+                               ng-click="" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{$index}}" aria-expanded="false" aria-controls="collapse{{$index}}">
+                                {{ usr[0].profile.name }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
