@@ -8,10 +8,6 @@ Meteor.users.allow({
 
 
 Accounts.validateLoginAttempt((attempt) ->
-  if !attempt.user.profile.active
-    console.log "L'utente " + attempt.user.profile.name + " risulta disabilitato e gli è quindi negato il login!"
-    throw new Meteor.Error(403, "User account is inactive! Please contact the administrator..");
-  else
     true
 )
 
